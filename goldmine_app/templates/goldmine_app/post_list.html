@@ -1,0 +1,51 @@
+{% extends "goldmine/base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h4>
+                <b><a class='post-title'href="{% url 'goldmine_app.views.post_detail' pk=post.pk %}">{{ post.title }}</a></b>
+                {% if post.difficulty == "BE" %}
+                    <span class="glyphicon glyphicon-heart-empty"></span>
+                {% elif post.difficulty == "IN" %}
+                    <span class="glyphicon glyphicon-heart-empty"></span>
+                    <span class="glyphicon glyphicon-heart-empty"></span>
+                {% elif post.difficulty == "AD" %}
+                    <span class="glyphicon glyphicon-heart-empty"></span>
+                    <span class="glyphicon glyphicon-heart-empty"></span>
+                    <span class="glyphicon glyphicon-heart-empty"></span>
+                {% elif post.difficulty == "GE" %}
+                    <span class="glyphicon glyphicon-certificate"></span>
+                {% endif %}
+            </h4>
+            <h6> <a href="{{post.link}}"> {{ post.link }}</a> </h6>
+            <p>{{ post.text|truncatechars:200}}</p>
+        </div>
+
+    {% endfor %}
+{% endblock content %}
+
+{% block search %}
+
+	<h1>Categories</h1><br>
+	<h5>
+        <span class="glyphicon glyphicon-heart-empty"></span> 
+        <a href="{% url 'goldmine_app.views.post_beginner_list' %}">Beginner stuff</a>
+    </h5>
+	<h5>
+        <span class="glyphicon glyphicon-heart-empty"></span>
+        <span class="glyphicon glyphicon-heart-empty"></span> 
+        <a href="{% url 'goldmine_app.views.post_intermediate_list' %}">Getting the hang of it</a>
+    </h5>
+	<h5>
+        <span class="glyphicon glyphicon-heart-empty"></span>
+        <span class="glyphicon glyphicon-heart-empty"></span>
+        <span class="glyphicon glyphicon-heart-empty"></span> 
+        <a href="{% url 'goldmine_app.views.post_advanced_list' %}">Let's kick ass!</a>
+    </h5><br>
+    <h5>
+        <span class="glyphicon glyphicon-certificate"></span>
+        <a href="{% url 'goldmine_app.views.post_general_list' %}">General skills</a>
+    <br>  
+
+{% endblock %}

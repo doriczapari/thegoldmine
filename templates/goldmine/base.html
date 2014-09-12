@@ -1,0 +1,59 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>The Gold Mine</title>
+
+        
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    		
+    		<link rel="stylesheet" href="{% static 'css/goldmine_app.css' %}">
+    		<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+            <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+
+    </head>
+
+    <body>
+
+        <div class="page-header">
+            <a href="{% url 'post_list' %}" class="top-menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+
+            {% if user.is_authenticated %}
+                <p class="top-menu-login">Hi {{ user.username }}!<small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
+            {% else %}
+                <p ><a class="top-menu-login" href="{% url 'django.contrib.auth.views.login' %}">Login/register</a></p>
+
+            {% endif %}
+
+            {% block header %}
+            {% endblock %}
+        
+        </div>
+  
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-12">
+                {% block text %}
+                {% endblock %}
+                </div>
+                <div class="col-sm-8">
+                {% block content %}
+                {% endblock %}                
+                </div>
+                <div class="col-sm-3">
+                {% block search %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            The Gold Mine is based on the <a href="tutorial.djangogirls.org">Django Girls Tutorial</a> and other sources you can check out <a href="{% url 'goldmine_app.views.thanks' %}">here</a>.<br>
+            Dori Czapari 2014 
+        </div>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

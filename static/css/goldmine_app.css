@@ -1,0 +1,165 @@
+h1, h1 a, h1 a:active, h1 a:visited {
+    font-family: Lobster, cursive;
+    color:#000000;
+}
+
+
+h2, h2 a, h2 a:active, h2 a:visited, h3, h3 a, h3 a:active, h3 a:visited, h4, h4 a, h4 a:active, h4 a:visited {
+    font-family: Raleway;
+    color:#3D3D3D;
+}
+
+
+
+
+h5, h5 a, h5 a:active, h5 a:visited {
+    font-family: Raleway;
+    color: #000000;
+    text-decoration: none;
+}
+
+h6 a, h6 a:active, h6 a:visited {
+    font-family: Raleway;
+    color: #CC4040;
+    text-decoration: none;
+}
+
+body {
+    font-family: Raleway;
+    font-size: 15px;
+    color:#3D3D3D;
+    /* Background pattern from subtlepatterns.com */
+    background: url('../images/ricepaper2.png') repeat 0 0;
+}
+
+
+.page-header {
+    margin-top: 0;
+    margin-right: -15px;
+    padding: 20px 0px 50px 0px;
+    background-color:#CC4040;
+}
+
+
+
+.header-title, .header-title a, .header-title a:visited, .header-title a:active {
+    color: #ffffff;
+    font-size: 64pt;
+    text-decoration: none;
+    text-align: center;
+    padding: 60px 0px 20px 0px;
+
+}
+
+
+.header-text {
+    color: #ffffff;
+    font-family: Raleway;
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+.post-title, .post-title a, .post-title a:visited, post-title a:active {
+    color:#3D3D3D;
+}
+
+
+.content {
+    margin-left: 40px;
+
+}
+
+
+.date {
+    padding-top: 20px;
+    float: right;
+    color: #828282;
+}
+
+/*
+.save {
+    float: right;
+}*/
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: left;
+    font-size: 22pt;
+    margin-left: 20px;
+    margin-bottom: 50px;
+
+}
+
+.top-menu-login {
+    color: #ffffff;
+    font-size: 12pt;
+    font-family: Raleway;
+    float:right;
+    margin-right: 20px;
+    margin-bottom: 50px;
+
+}
+
+.post {
+    margin-bottom: 30px;
+    margin-right:20px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+
+.btn {
+    font-family: Raleway; 
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.col-sm-4 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+
+.col-sm-12 {
+    text-align: center;
+    font-size: 18px;
+    color:#373737;
+}
+
+.welcome {
+    padding: 30px 70px 50px 50px;
+}
+
+
+.col-sm-3 {
+    float:right;
+}
+
+
+.footer {
+    float:bottom;
+    margin-right:-15px;
+    margin-top: 300px;
+    padding: 15px 0px 15px 0px;
+    font-family: Raleway;
+    background: rgba(204, 64, 64, 0.2);
+    color:#737373;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer a, .footer a:active, .footer a:hover, .footer a:visited {
+    color:#CC4040;
+}
+
+.col-sm-12 a, .col-sm-12 a:active, .col-sm-12 a:hover, .col-sm-12 a:visited {
+    color:#CC4040;
+}
